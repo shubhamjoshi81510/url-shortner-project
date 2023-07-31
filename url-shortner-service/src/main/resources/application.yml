@@ -1,0 +1,21 @@
+server:
+  port: 8080
+
+
+spring:
+  datasource:
+    url: dburl
+    username: dbusername
+    password: dbpassword
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: false
+
+
+

@@ -1,0 +1,9 @@
+# Go to the spring boot project dir and run below command:
+mvn clean package -U
+
+# In spring boot project, go to target  folder and copy the jar file as app.jar to the folder, where server key is placed.
+
+
+# Transfer the file to Server using below command:
+
+scp -o StrictHostKeyChecking=no -i key.pem  app.jar ubuntu@ec2-3-96-159-196.ca-central-1.compute.amazonaws.com:~/app.jar

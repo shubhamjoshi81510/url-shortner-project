@@ -9,21 +9,20 @@ import org.springframework.web.servlet.view.RedirectView;
 
 @RestController
 public class ApplicationController {
-@Autowired
-private UrlService urlService;
+    @Autowired
+    private UrlService urlService;
+
     @CrossOrigin(origins = "*")
-@PostMapping("/url")
- public UrlMapping getKey(@RequestBody UrlReq urlReq){
-        UrlMapping urlMapping=urlService.genrateUrl(urlReq);
+    @PostMapping("/url")
+    public UrlMapping getKey(@RequestBody UrlReq urlReq) {
+        UrlMapping urlMapping= urlService.generateUrl(urlReq);
         return urlMapping;
-}
+    }
 
-   @GetMapping("/{key}")
-   public RedirectView getUrlByKey(@PathVariable String key) {
-        UrlMapping urlMapping = urlService.getUrlByKey(key);
-        String redirectUrl = urlMapping.getUrl();
+    @GetMapping("/{key}")
+    public RedirectView getUrlByKey(@PathVariable String key) {
+        String redirectUrl = urlService.getUrlByKey(key);
         return new RedirectView(redirectUrl);
-
     }
 
 }

@@ -20,6 +20,11 @@ public class UrlService {
 
     private static final String CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
+    /**
+     Generates a random string of a specified length.
+     @param length The length of the random string to be generated.
+     @return A randomly generated string of the specified length.
+     */
     private String generateRandomString(int length) {
         Random random = new Random();
         StringBuilder stringBuilder = new StringBuilder(length);
@@ -40,6 +45,11 @@ public class UrlService {
         return urlMapping;
     }
 
+    /**
+     * Fetches the Url value associated with the key
+     * @param key input value, specified by user
+     * @return url, associated with the key.
+     */
     public String getUrlByKey(String key) {
 
         System.out.println("Fetching URL Data For key: "+ key);

@@ -4,8 +4,8 @@ server:
 spring:
   datasource:
     url: dburl
-    username: username
-    password: password
+    username: dbusername
+    password: dbpassword
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     database-platform: org.hibernate.dialect.MySQL8Dialect
@@ -17,5 +17,5 @@ spring:
         format_sql: false
 
 redis:
-  host: redis-url
+  host: my-redis-cluster.v7m3rc.ng.0001.cac1.cache.amazonaws.com
   port: 6379
